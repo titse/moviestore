@@ -4,15 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "MovieStore - Online movies" %></title>
+    <link rel="shortcut icon" href="<%=asset_path("logo.png")%>" >
 
-    <%= stylesheet_link_tag    "application" %>
+
+    <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
-	 <%= render "layouts/header"%>
+
+    <%= render "layouts/header"%>
 
     <%= render "layouts/alerts" %>
 
@@ -27,7 +30,7 @@
       </div>
     </footer>
 
-    <%= yield %>
     <%= javascript_include_tag "application" %>
+    
   </body>
 </html>
